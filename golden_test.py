@@ -1,4 +1,5 @@
 # pylint: disable=missing-function-docstring
+# pylint: disable=missing-module-docstring
 import io
 import os
 import tempfile
@@ -21,4 +22,3 @@ def test(golden):
             main.run(source, binary)
 
         assert output.getvalue() == golden.out['output']
-

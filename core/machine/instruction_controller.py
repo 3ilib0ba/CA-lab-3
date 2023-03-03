@@ -1,4 +1,5 @@
 # pylint: disable=missing-function-docstring
+# pylint: disable=missing-module-docstring
 import operator
 from types import UnionType
 from typing import Callable, Optional, Iterator, Iterable

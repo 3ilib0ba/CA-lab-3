@@ -1,4 +1,6 @@
 # pylint: disable=missing-function-docstring
+# pylint: disable=missing-module-docstring
+# pylint: disable=missing-class-docstring
 from enum import Enum
 from typing import Callable
 
