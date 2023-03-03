@@ -1,3 +1,4 @@
+# pylint: disable=missing-function-docstring
 from dataclasses import dataclass, field
 from typing import TypeAlias
 

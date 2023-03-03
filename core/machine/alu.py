@@ -1,3 +1,4 @@
+# pylint: disable=missing-function-docstring
 from enum import Enum
 from typing import Callable
 

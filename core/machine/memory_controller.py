@@ -1,3 +1,4 @@
+# pylint: disable=missing-function-docstring
 from core.exceptions import DataNotFound, NotEnoughMemory
 from core.machine.io_controller import IOController
 from core.model import Address

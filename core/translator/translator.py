@@ -1,3 +1,4 @@
+# pylint: disable=missing-function-docstring
 """
 Translating .pyasm code into object file
 """

@@ -1,3 +1,4 @@
+# pylint: disable=missing-function-docstring
 import sys
 
 from core.machine.config import NULL_TERM

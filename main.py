@@ -1,4 +1,4 @@
-
+# pylint: disable=missing-function-docstring
 import sys
 from typing import Optional, Type
 

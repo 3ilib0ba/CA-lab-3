@@ -1,3 +1,4 @@
+# pylint: disable=missing-function-docstring
 import pickle
 
 from core.model import Program

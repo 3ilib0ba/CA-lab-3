@@ -1,3 +1,4 @@
+# pylint: disable=missing-function-docstring
 """
 Computer system containing:
     - clock generator

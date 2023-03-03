@@ -1,3 +1,4 @@
+# pylint: disable=missing-function-docstring
 from typing import Iterator
 
 from core.exceptions import RegisterIsNotWritable, RegisterIsNotReadable

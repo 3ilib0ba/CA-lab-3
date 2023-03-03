@@ -1,3 +1,4 @@
+# pylint: disable=missing-function-docstring
 from types import TracebackType
 from typing import Type, Literal, Optional
 
