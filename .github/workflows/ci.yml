@@ -20,9 +20,10 @@ jobs:
         pip install pylint
         pip install pytest-golden
         pip install poetry
+        pip install typer
     - name: Analysing the code with pylint
       run: |
-        pylint --max-line-length=120 ./main.py ./golden-test.py ./core
+        pylint --max-line-length=120 ./main.py ./golden_test.py ./core
     - name: Run tests
       run: |
         pytest golden-test.py
