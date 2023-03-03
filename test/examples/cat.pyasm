@@ -1,0 +1,12 @@
+section .data
+    NULL_TERM: 0x00
+
+section .text
+    .read_char:
+        MOV %rsx, #STDIN
+        CMP %rsx, #NULL_TERM
+        JE .exit
+        MOV #STDOUT, %rsx
+        JMP .read_char
+    .exit:
+        HLT

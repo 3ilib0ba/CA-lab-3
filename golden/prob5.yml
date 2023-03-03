@@ -1,0 +1,48 @@
+source: |
+  section .data
+      MAX_DIVIDER: 5
+      STEP: 2
+
+  section .text
+      XOR %rax, %rax
+      LDN #MAX_DIVIDER, #STDIN
+
+      MOV %rax, #STEP
+      .find_prime:
+          INC %rax
+          CMP %rax, #MAX_DIVIDER
+          JG .find_number
+          MOV %rdx, 2
+          .check_mod:
+              MOD %rbx, %rax, %rdx
+              JE .find_prime
+              INC %rdx
+              CMP %rax, %rdx
+              JE .mul_step
+              JMP .check_mod
+          .mul_step:
+              MUL #STEP, %rax
+              JMP .find_prime
+
+      .find_number:
+          XOR %rax, %rax
+          .next_number:
+              ADD %rax, #STEP
+              XOR %rdx, %rdx
+          .next_divider:
+              INC %rdx
+              MOD %rbx, %rax, %rdx
+              JNE .next_number
+
+              CMP %rdx, #MAX_DIVIDER
+              JE .exit
+
+              JMP .next_divider
+      .exit:
+          MOVN #STDOUT, %rax
+          MOV #STDOUT, '\n'
+          HLT
+input: |
+  20
+output: |
+  232792560

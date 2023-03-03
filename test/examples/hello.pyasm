@@ -1,0 +1,14 @@
+section .data
+    NULL_TERM: 0x00
+    HELLO: "hello world"
+
+section .text
+    .print_char:
+        MOV %rdx, #HELLO[%rdi]
+        CMP %rdx, #NULL_TERM
+        JE .exit
+        MOV #STDOUT, %rdx
+        INC %rdi
+        JMP .print_char
+    .exit:
+        HLT

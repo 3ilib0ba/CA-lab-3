@@ -1,0 +1,230 @@
+- INS: MOV %RSX, #STDIN
+- REG: {'RAX': 0, 'RBX': 0, 'RDX': 0, 'RSX': 0, 'RIP': 0, 'RSI': 0, 'RDI': 0}
+- ALU: {'N': False, 'Z': False, 'V': False, 'C': False}
+- CLK: tick: 1, inst: 0
+
+- INS: MOV %RSX, #STDIN
+- REG: {'RAX': 0, 'RBX': 0, 'RDX': 0, 'RSX': 102, 'RIP': 1, 'RSI': 0, 'RDI': 0}
+- ALU: {'N': False, 'Z': False, 'V': False, 'C': False}
+- CLK: tick: 2, inst: 1
+
+- INS: CMP %RSX, #NULL_TERM
+- REG: {'RAX': 0, 'RBX': 0, 'RDX': 0, 'RSX': 102, 'RIP': 1, 'RSI': 0, 'RDI': 0}
+- ALU: {'N': False, 'Z': False, 'V': False, 'C': False}
+- CLK: tick: 3, inst: 1
+
+- INS: CMP %RSX, #NULL_TERM
+- REG: {'RAX': 0, 'RBX': 0, 'RDX': 0, 'RSX': 102, 'RIP': 2, 'RSI': 0, 'RDI': 0}
+- ALU: {'N': False, 'Z': False, 'V': False, 'C': False}
+- CLK: tick: 4, inst: 2
+
+- INS: JE .exit
+- REG: {'RAX': 0, 'RBX': 0, 'RDX': 0, 'RSX': 102, 'RIP': 3, 'RSI': 0, 'RDI': 0}
+- ALU: {'N': False, 'Z': False, 'V': False, 'C': False}
+- CLK: tick: 5, inst: 3
+
+- INS: MOV #STDOUT, %RSX
+- REG: {'RAX': 0, 'RBX': 0, 'RDX': 0, 'RSX': 102, 'RIP': 3, 'RSI': 0, 'RDI': 0}
+- ALU: {'N': False, 'Z': False, 'V': False, 'C': False}
+- CLK: tick: 6, inst: 3
+
+- INS: MOV #STDOUT, %RSX
+- REG: {'RAX': 0, 'RBX': 0, 'RDX': 0, 'RSX': 102, 'RIP': 4, 'RSI': 0, 'RDI': 0}
+- ALU: {'N': False, 'Z': False, 'V': False, 'C': False}
+- CLK: tick: 7, inst: 4
+
+- INS: JMP .read_char
+- REG: {'RAX': 0, 'RBX': 0, 'RDX': 0, 'RSX': 102, 'RIP': 0, 'RSI': 0, 'RDI': 0}
+- ALU: {'N': False, 'Z': False, 'V': False, 'C': False}
+- CLK: tick: 8, inst: 5
+
+- INS: MOV %RSX, #STDIN
+- REG: {'RAX': 0, 'RBX': 0, 'RDX': 0, 'RSX': 102, 'RIP': 0, 'RSI': 0, 'RDI': 0}
+- ALU: {'N': False, 'Z': False, 'V': False, 'C': False}
+- CLK: tick: 9, inst: 5
+
+- INS: MOV %RSX, #STDIN
+- REG: {'RAX': 0, 'RBX': 0, 'RDX': 0, 'RSX': 111, 'RIP': 1, 'RSI': 0, 'RDI': 0}
+- ALU: {'N': False, 'Z': False, 'V': False, 'C': False}
+- CLK: tick: 10, inst: 6
+
+- INS: CMP %RSX, #NULL_TERM
+- REG: {'RAX': 0, 'RBX': 0, 'RDX': 0, 'RSX': 111, 'RIP': 1, 'RSI': 0, 'RDI': 0}
+- ALU: {'N': False, 'Z': False, 'V': False, 'C': False}
+- CLK: tick: 11, inst: 6
+
+- INS: CMP %RSX, #NULL_TERM
+- REG: {'RAX': 0, 'RBX': 0, 'RDX': 0, 'RSX': 111, 'RIP': 2, 'RSI': 0, 'RDI': 0}
+- ALU: {'N': False, 'Z': False, 'V': False, 'C': False}
+- CLK: tick: 12, inst: 7
+
+- INS: JE .exit
+- REG: {'RAX': 0, 'RBX': 0, 'RDX': 0, 'RSX': 111, 'RIP': 3, 'RSI': 0, 'RDI': 0}
+- ALU: {'N': False, 'Z': False, 'V': False, 'C': False}
+- CLK: tick: 13, inst: 8
+
+- INS: MOV #STDOUT, %RSX
+- REG: {'RAX': 0, 'RBX': 0, 'RDX': 0, 'RSX': 111, 'RIP': 3, 'RSI': 0, 'RDI': 0}
+- ALU: {'N': False, 'Z': False, 'V': False, 'C': False}
+- CLK: tick: 14, inst: 8
+
+- INS: MOV #STDOUT, %RSX
+- REG: {'RAX': 0, 'RBX': 0, 'RDX': 0, 'RSX': 111, 'RIP': 4, 'RSI': 0, 'RDI': 0}
+- ALU: {'N': False, 'Z': False, 'V': False, 'C': False}
+- CLK: tick: 15, inst: 9
+
+- INS: JMP .read_char
+- REG: {'RAX': 0, 'RBX': 0, 'RDX': 0, 'RSX': 111, 'RIP': 0, 'RSI': 0, 'RDI': 0}
+- ALU: {'N': False, 'Z': False, 'V': False, 'C': False}
+- CLK: tick: 16, inst: 10
+
+- INS: MOV %RSX, #STDIN
+- REG: {'RAX': 0, 'RBX': 0, 'RDX': 0, 'RSX': 111, 'RIP': 0, 'RSI': 0, 'RDI': 0}
+- ALU: {'N': False, 'Z': False, 'V': False, 'C': False}
+- CLK: tick: 17, inst: 10
+
+- INS: MOV %RSX, #STDIN
+- REG: {'RAX': 0, 'RBX': 0, 'RDX': 0, 'RSX': 111, 'RIP': 1, 'RSI': 0, 'RDI': 0}
+- ALU: {'N': False, 'Z': False, 'V': False, 'C': False}
+- CLK: tick: 18, inst: 11
+
+- INS: CMP %RSX, #NULL_TERM
+- REG: {'RAX': 0, 'RBX': 0, 'RDX': 0, 'RSX': 111, 'RIP': 1, 'RSI': 0, 'RDI': 0}
+- ALU: {'N': False, 'Z': False, 'V': False, 'C': False}
+- CLK: tick: 19, inst: 11
+
+- INS: CMP %RSX, #NULL_TERM
+- REG: {'RAX': 0, 'RBX': 0, 'RDX': 0, 'RSX': 111, 'RIP': 2, 'RSI': 0, 'RDI': 0}
+- ALU: {'N': False, 'Z': False, 'V': False, 'C': False}
+- CLK: tick: 20, inst: 12
+
+- INS: JE .exit
+- REG: {'RAX': 0, 'RBX': 0, 'RDX': 0, 'RSX': 111, 'RIP': 3, 'RSI': 0, 'RDI': 0}
+- ALU: {'N': False, 'Z': False, 'V': False, 'C': False}
+- CLK: tick: 21, inst: 13
+
+- INS: MOV #STDOUT, %RSX
+- REG: {'RAX': 0, 'RBX': 0, 'RDX': 0, 'RSX': 111, 'RIP': 3, 'RSI': 0, 'RDI': 0}
+- ALU: {'N': False, 'Z': False, 'V': False, 'C': False}
+- CLK: tick: 22, inst: 13
+
+- INS: MOV #STDOUT, %RSX
+- REG: {'RAX': 0, 'RBX': 0, 'RDX': 0, 'RSX': 111, 'RIP': 4, 'RSI': 0, 'RDI': 0}
+- ALU: {'N': False, 'Z': False, 'V': False, 'C': False}
+- CLK: tick: 23, inst: 14
+
+- INS: JMP .read_char
+- REG: {'RAX': 0, 'RBX': 0, 'RDX': 0, 'RSX': 111, 'RIP': 0, 'RSI': 0, 'RDI': 0}
+- ALU: {'N': False, 'Z': False, 'V': False, 'C': False}
+- CLK: tick: 24, inst: 15
+
+- INS: MOV %RSX, #STDIN
+- REG: {'RAX': 0, 'RBX': 0, 'RDX': 0, 'RSX': 111, 'RIP': 0, 'RSI': 0, 'RDI': 0}
+- ALU: {'N': False, 'Z': False, 'V': False, 'C': False}
+- CLK: tick: 25, inst: 15
+
+- INS: MOV %RSX, #STDIN
+- REG: {'RAX': 0, 'RBX': 0, 'RDX': 0, 'RSX': 10, 'RIP': 1, 'RSI': 0, 'RDI': 0}
+- ALU: {'N': False, 'Z': False, 'V': False, 'C': False}
+- CLK: tick: 26, inst: 16
+
+- INS: CMP %RSX, #NULL_TERM
+- REG: {'RAX': 0, 'RBX': 0, 'RDX': 0, 'RSX': 10, 'RIP': 1, 'RSI': 0, 'RDI': 0}
+- ALU: {'N': False, 'Z': False, 'V': False, 'C': False}
+- CLK: tick: 27, inst: 16
+
+- INS: CMP %RSX, #NULL_TERM
+- REG: {'RAX': 0, 'RBX': 0, 'RDX': 0, 'RSX': 10, 'RIP': 2, 'RSI': 0, 'RDI': 0}
+- ALU: {'N': False, 'Z': False, 'V': False, 'C': False}
+- CLK: tick: 28, inst: 17
+
+- INS: JE .exit
+- REG: {'RAX': 0, 'RBX': 0, 'RDX': 0, 'RSX': 10, 'RIP': 3, 'RSI': 0, 'RDI': 0}
+- ALU: {'N': False, 'Z': False, 'V': False, 'C': False}
+- CLK: tick: 29, inst: 18
+
+- INS: MOV #STDOUT, %RSX
+- REG: {'RAX': 0, 'RBX': 0, 'RDX': 0, 'RSX': 10, 'RIP': 3, 'RSI': 0, 'RDI': 0}
+- ALU: {'N': False, 'Z': False, 'V': False, 'C': False}
+- CLK: tick: 30, inst: 18
+
+- INS: MOV #STDOUT, %RSX
+- REG: {'RAX': 0, 'RBX': 0, 'RDX': 0, 'RSX': 10, 'RIP': 4, 'RSI': 0, 'RDI': 0}
+- ALU: {'N': False, 'Z': False, 'V': False, 'C': False}
+- CLK: tick: 31, inst: 19
+
+- INS: JMP .read_char
+- REG: {'RAX': 0, 'RBX': 0, 'RDX': 0, 'RSX': 10, 'RIP': 0, 'RSI': 0, 'RDI': 0}
+- ALU: {'N': False, 'Z': False, 'V': False, 'C': False}
+- CLK: tick: 32, inst: 20
+
+- INS: MOV %RSX, #STDIN
+- REG: {'RAX': 0, 'RBX': 0, 'RDX': 0, 'RSX': 10, 'RIP': 0, 'RSI': 0, 'RDI': 0}
+- ALU: {'N': False, 'Z': False, 'V': False, 'C': False}
+- CLK: tick: 33, inst: 20
+
+- INS: MOV %RSX, #STDIN
+- REG: {'RAX': 0, 'RBX': 0, 'RDX': 0, 'RSX': 10, 'RIP': 1, 'RSI': 0, 'RDI': 0}
+- ALU: {'N': False, 'Z': False, 'V': False, 'C': False}
+- CLK: tick: 34, inst: 21
+
+- INS: CMP %RSX, #NULL_TERM
+- REG: {'RAX': 0, 'RBX': 0, 'RDX': 0, 'RSX': 10, 'RIP': 1, 'RSI': 0, 'RDI': 0}
+- ALU: {'N': False, 'Z': False, 'V': False, 'C': False}
+- CLK: tick: 35, inst: 21
+
+- INS: CMP %RSX, #NULL_TERM
+- REG: {'RAX': 0, 'RBX': 0, 'RDX': 0, 'RSX': 10, 'RIP': 2, 'RSI': 0, 'RDI': 0}
+- ALU: {'N': False, 'Z': False, 'V': False, 'C': False}
+- CLK: tick: 36, inst: 22
+
+- INS: JE .exit
+- REG: {'RAX': 0, 'RBX': 0, 'RDX': 0, 'RSX': 10, 'RIP': 3, 'RSI': 0, 'RDI': 0}
+- ALU: {'N': False, 'Z': False, 'V': False, 'C': False}
+- CLK: tick: 37, inst: 23
+
+- INS: MOV #STDOUT, %RSX
+- REG: {'RAX': 0, 'RBX': 0, 'RDX': 0, 'RSX': 10, 'RIP': 3, 'RSI': 0, 'RDI': 0}
+- ALU: {'N': False, 'Z': False, 'V': False, 'C': False}
+- CLK: tick: 38, inst: 23
+
+- INS: MOV #STDOUT, %RSX
+- REG: {'RAX': 0, 'RBX': 0, 'RDX': 0, 'RSX': 10, 'RIP': 4, 'RSI': 0, 'RDI': 0}
+- ALU: {'N': False, 'Z': False, 'V': False, 'C': False}
+- CLK: tick: 39, inst: 24
+
+- INS: JMP .read_char
+- REG: {'RAX': 0, 'RBX': 0, 'RDX': 0, 'RSX': 10, 'RIP': 0, 'RSI': 0, 'RDI': 0}
+- ALU: {'N': False, 'Z': False, 'V': False, 'C': False}
+- CLK: tick: 40, inst: 25
+
+- INS: MOV %RSX, #STDIN
+- REG: {'RAX': 0, 'RBX': 0, 'RDX': 0, 'RSX': 10, 'RIP': 0, 'RSI': 0, 'RDI': 0}
+- ALU: {'N': False, 'Z': False, 'V': False, 'C': False}
+- CLK: tick: 41, inst: 25
+
+- INS: MOV %RSX, #STDIN
+- REG: {'RAX': 0, 'RBX': 0, 'RDX': 0, 'RSX': 0, 'RIP': 1, 'RSI': 0, 'RDI': 0}
+- ALU: {'N': False, 'Z': False, 'V': False, 'C': False}
+- CLK: tick: 42, inst: 26
+
+- INS: CMP %RSX, #NULL_TERM
+- REG: {'RAX': 0, 'RBX': 0, 'RDX': 0, 'RSX': 0, 'RIP': 1, 'RSI': 0, 'RDI': 0}
+- ALU: {'N': False, 'Z': False, 'V': False, 'C': False}
+- CLK: tick: 43, inst: 26
+
+- INS: CMP %RSX, #NULL_TERM
+- REG: {'RAX': 0, 'RBX': 0, 'RDX': 0, 'RSX': 0, 'RIP': 2, 'RSI': 0, 'RDI': 0}
+- ALU: {'N': False, 'Z': True, 'V': False, 'C': False}
+- CLK: tick: 44, inst: 27
+
+- INS: JE .exit
+- REG: {'RAX': 0, 'RBX': 0, 'RDX': 0, 'RSX': 0, 'RIP': 5, 'RSI': 0, 'RDI': 0}
+- ALU: {'N': False, 'Z': True, 'V': False, 'C': False}
+- CLK: tick: 45, inst: 28
+
+- INS: HLT 
+- REG: {'RAX': 0, 'RBX': 0, 'RDX': 0, 'RSX': 0, 'RIP': 5, 'RSI': 0, 'RDI': 0}
+- ALU: {'N': False, 'Z': True, 'V': False, 'C': False}
+- CLK: tick: 46, inst: 28
+
