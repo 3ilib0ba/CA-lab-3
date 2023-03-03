@@ -23,10 +23,11 @@ jobs:
         poetry install --no-root
         pip install flake8
     - name: Analysing the code with flake8
-    - run: |
+      run: |
         flake8 .
     - name: Analysing the code with pylint
+      run: |
         pylint --max-line-length=120 ./main.py ./golden-test.py ./core
     - name: Run tests
-    - run:
+      run: |
         pytest golden-test.py
