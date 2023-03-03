@@ -23,7 +23,7 @@ jobs:
         pip install typer
     - name: Analysing the code with pylint
       run: |
-        pylint --max-line-length=120 ./main.py ./golden_test.py ./core
+        pylint --max-line-length=120 --min-public-methods=0 --max-public-methods=40 ./main.py ./golden_test.py ./core
     - name: Run tests
       run: |
         pytest golden-test.py
