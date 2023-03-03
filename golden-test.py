@@ -20,3 +20,4 @@ def test(golden):
             main.run(source, binary)
 
         assert output.getvalue() == golden.out['output']
+
