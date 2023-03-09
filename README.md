@@ -11,7 +11,7 @@
 
 ### Вариант
 
-`asm | cisc | harv | hw | instr | struct | stream | mem | prob5`
+`asm | cisc | harv | hw | tickte | struct | stream | mem | prob5`
 
 ## Язык программирования
 
