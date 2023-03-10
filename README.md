@@ -15,6 +15,48 @@
 
 ## Язык программирования
 
+### BNF
+
+``` 
+<program>       ::= <section_text> | <section_data> <section_text>
+
+<section_data>  ::= "section .data" <line> <data>
+<data>          ::= <data_line> 
+                  | <data_line> <data>
+<data_line>     ::= <var_name> <var_value> <line> <extra_s> 
+                  | <extra_s>
+<var_name>      ::= <word> ":"
+<var_value>     ::= <string> | <number> | <buffer>
+<string>        ::= "\'" <word> "\'" 
+                  | "\"" <word> "\""
+<buffer>        ::= "buf " <number>
+
+<section_text>  ::= "section .text" <line> <instructions>
+<instructions>  ::= <instruction> 
+                  | <instruction> <instructions>
+<instruction>   ::= <label_and_maybe_step> <line> <extra_s>
+                  | <step> <line> <extra_s>
+<label_and_maybe_step>  ::= <label> | <label> <step>
+<label>         ::= "." <word_without_space> ":"
+<step>          ::= <command> <operand(-s)>
+
+<word>          ::= <letter_or_digit_or_space> 
+                  | <letter_or_digit_or_space> <word>
+<word_without_space>        ::= <letter_or_digit> 
+                              | <letter_or_digit> <word_without_space>
+<letter_or_digit>           ::= <letter> | <digit>
+<letter_or_digit_or_space>  ::= <letter> | <digit> | <space>
+<extra_s>       ::= <line_or_space> | <line_or_space> <extra_s>
+<line_or_space> ::= <line> | <space>
+<line>          ::= "\n" 
+<spaces>        ::= <space> | <space> <spaces>
+<space>         ::= " " | "\t"
+<letter>        ::= [a-z] | [A-Z] | [!@#$%^&*()_+-=]
+<number>        ::= <digit> | <digit> <number>
+<digit>         ::= [0-9]
+<comment>       ::= ";" <text>
+```
+
 ### Структура программы
 
 ```
