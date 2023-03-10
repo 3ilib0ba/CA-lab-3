@@ -57,21 +57,9 @@
 <comment>       ::= ";" <text>
 ```
 
-### Структура программы
-
-```
-; секция данных
-section .data
-    var: (STR) | (NUM) | (buf NUM)
-
-; секция кода
-section .text
-    [label:] instr [op1, [op2, [...]]]
-```
-
 ### Секция данных
 
-```
+``` asm
 section .data
     HELLO:      "Hello"         ; строка
     NUMBER_HEX: 0xDEAD          ; число в 16 СС
