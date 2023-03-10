@@ -171,9 +171,13 @@ Program:
 
 ## Апробация
 
+В качестве тестов для machine и translator происходит запуск 3 программ: 
+
 1. [cat](test/examples/cat.pyasm)
 2. [hello](test/examples/hello.pyasm)
 3. [prob5](test/examples/prob5.pyasm)
+
+Golden тесты можно найти [тут](golden_test.py)
 
 Журналы и коды алгоритмов можно посмотреть в каталоге [test/examples](test/examples).
 
