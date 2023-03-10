@@ -17,7 +17,7 @@
 
 ### BNF
 
-``` 
+``` ebnf
 <program>       ::= <section_text> | <section_data> <section_text>
 
 <section_data>  ::= "section .data" <line> <data>
