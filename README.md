@@ -89,7 +89,7 @@
 |    ...                      |
 +-----------------------------+
 
-Data memory
+    Data memory
 +-----------------------------+
 | 00  : number                |
 | 01  : number                |
@@ -100,6 +100,61 @@ Data memory
 | 100 : number                |
 |    ...                      |
 +-----------------------------+
+```
+
+### Структура программы
+
+``` asm
+; секция данных
+section .data
+    var: (STR) | (NUM) | (buf NUM)
+
+; секция кода
+section .text
+    [label:] instr [op1, [op2, [...]]]
+```
+
+### Секция данных
+
+``` asm
+section .data
+    HELLO:      "Hello"         ; строка
+    NUMBER_HEX: 0xDEAD          ; число в 16 СС
+    NUMBER_OCT: 0o1337          ; число в 8 СС
+    NUMBER_BIN: 0b10110         ; число в 2 СС
+    NUMBER_DEC: -81             ; число в 10 СС
+    ARRAY:      buf 20          ; массив из 20 элементов
+    NULL_TERM:  0x00
+```
+
+### Секция кода
+
+``` asm
+section .text
+    .print_char:                        ; метка
+        MOV %rdx, #ARRAY[%rdi]          ; загрузить
+                                        ; в регистр RDX
+                                        ; значение ARRAY[RDI]
+                                        ; (косвенная адресация) 
+        
+        CMP %rdx, #NULL_TERM            ; сравнить
+                                        ; регистр RDX
+                                        ; и переменную
+                                        ; (прямая адресация)
+
+        JE .exit                        ; если равны
+                                        ; прыгаем на .exit
+
+        MOV #STDOUT, %rdx               ; выводим символ
+                                        ; из регистра RDX
+
+        INC %rdi                        ; инкрементируем
+                                        ; регистр RDI
+        
+        JMP .print_char                 ; прыгаем на .print_char
+    
+    .exit:
+        HLT                             ; завершение программы
 ```
 
 ### Система команд
